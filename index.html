@@ -7,61 +7,71 @@
   <meta name="description" content="Vivahteikasta tarjoaa kesäisiä puistojumppia Rekolan liikuntapuistossa rennolla, energisellä ja kannustavalla otteella." />
   <style>
     :root{
---cream:#f6f1ea;
---green:#22352c;
---sage:#cbbba7;
---pink:#c692a8;
---hotpink:#9e5d77;
---orange:#b97a56;
---blue:#22352c;
---white:#ffffff;
---text:#2d352f;
+      --cream:#faf6f0;
+      --green:#123c2f;
+      --sage:#d7e8d9;
+      --pink:#ffb1c8;
+      --hotpink:#ff4f8b;
+      --orange:#ff914d;
+      --blue:#1463ff;
+      --white:#ffffff;
+      --text:#22352c;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+
     body{
       margin:0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:var(--cream);
       color:var(--green);
     }
+
     a{color:inherit}
+
     header{
       position:sticky;top:0;z-index:20;
-      background:rgba(250,247,242,.82);
+      background:rgba(250,246,240,.82);
       backdrop-filter:blur(18px);
       border-bottom:1px solid var(--sage);
     }
+
     .nav{
       max-width:1120px;margin:0 auto;padding:18px 22px;
       display:flex;align-items:center;justify-content:space-between;gap:20px;
     }
-    .logo{
+
+    .logo,
+    .footer-logo{
       display:flex;
       flex-direction:column;
       line-height:1;
     }
-    .logo span{
+
+    .logo span,
+    .footer-logo strong{
       font-size:22px;
       font-weight:850;
       letter-spacing:-.03em;
     }
 
-    .logo em{
+    .logo em,
+    .footer-logo em{
       font-size:22px;
       font-style:italic;
       font-family:"SignPainter", "Snell Roundhand", cursive;
       color:#5d6b5f;
-      
       margin-top:-4px;
-      
       align-self:flex-end;
-      
       transform:translateX(32px);
+      display:block;
     }
+
     .links{display:flex;gap:26px;font-size:14px;color:#4d604f}
     .links a{text-decoration:none}
     .links a:hover{color:var(--blue)}
+
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       min-height:46px;padding:0 22px;border-radius:999px;
@@ -69,58 +79,70 @@
       box-shadow:0 18px 38px rgba(20,99,255,.22);
       transition:.2s ease;
     }
+
     .btn:hover{background:var(--hotpink);transform:translateY(-1px)}
     .btn.secondary{background:white;color:var(--green);box-shadow:none;border:1px solid var(--sage)}
     .btn.secondary:hover{background:var(--orange);color:white;border-color:var(--orange)}
+
     .hero{
       max-width:1120px;margin:0 auto;padding:72px 22px 54px;
       display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;
     }
+
     .pill{
       display:inline-flex;gap:8px;align-items:center;
       padding:9px 14px;border:1px solid var(--sage);border-radius:999px;
       background:white;color:#526554;font-size:14px;font-weight:700;
       margin-bottom:22px;
     }
+
     h1{
       font-size:clamp(46px,7vw,82px);
       line-height:.94;letter-spacing:-.07em;margin:0;
     }
+
     .lead{
       margin:24px 0 30px;color:#566757;font-size:19px;line-height:1.75;max-width:620px;
     }
+
     .hero-card{
       position:relative;border-radius:38px;overflow:hidden;
       min-height:580px;background:var(--pink);
       box-shadow:0 34px 80px rgba(22,53,31,.18);
     }
+
     .hero-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+
     .floating{
       position:absolute;left:22px;right:22px;bottom:22px;
       background:rgba(255,255,255,.88);backdrop-filter:blur(16px);
       padding:18px;border-radius:26px;border:1px solid rgba(255,255,255,.7);
       display:flex;justify-content:space-between;gap:16px;align-items:center;
     }
+
     .floating strong{display:block;font-size:17px}
     .floating span{display:block;color:#5d6b5f;font-size:14px;margin-top:3px}
+
     section{padding:78px 22px}
     .wrap{max-width:1120px;margin:0 auto}
     .section-title{font-size:clamp(34px,5vw,56px);line-height:1;letter-spacing:-.055em;margin:0}
     .muted{color:#596b5b;line-height:1.75;font-size:17px}
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+
     .card{
       background:white;border:1px solid var(--sage);border-radius:30px;padding:26px;
       box-shadow:0 20px 50px rgba(22,53,31,.08);
     }
+
     .contact-card{
       display:flex;
       justify-content:space-between;
       align-items:center;
       gap:40px;
     }
-    .contact-text{
-      flex:1;
-    }
+
+    .contact-text{flex:1}
+
     .liisa-photo{
       width:150px;
       height:150px;
@@ -129,67 +151,64 @@
       border-radius:20px;
       flex-shrink:0;
     }
+
     .icon{
       width:44px;height:44px;border-radius:16px;background:var(--pink);
       display:grid;place-items:center;font-size:22px;margin-bottom:18px;
     }
+
     .card:nth-child(2) .icon{background:#d7e7ff}
     .card:nth-child(3) .icon{background:#ffe1c9}
     .card h3{font-size:24px;margin:0 0 10px;letter-spacing:-.03em}
+
     .split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+
     .photo{
       border-radius:36px;overflow:hidden;min-height:420px;background:var(--sage);
       box-shadow:0 26px 70px rgba(22,53,31,.12);
     }
+
     .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
     .info-list{display:grid;gap:14px;margin-top:24px}
+
     .info{
       background:white;border:1px solid var(--sage);border-radius:999px;padding:14px 22px;
       display:flex;justify-content:space-between;gap:18px;align-items:center;
       color:#173d2b;font-size:15px;
     }
+
     .info strong{font-weight:800;white-space:nowrap}
     .info span{text-align:right}
+
     .price{
       background:var(--green);color:white;border-radius:38px;padding:48px;
       position:relative;overflow:hidden;
     }
+
     .price:before{
       content:"";position:absolute;width:220px;height:220px;border-radius:50%;
       background:var(--hotpink);right:-70px;top:-70px;opacity:.9;
     }
+
     .price:after{
       content:"";position:absolute;width:160px;height:160px;border-radius:50%;
       background:var(--orange);right:80px;bottom:-80px;opacity:.9;
     }
+
     .price > *{position:relative;z-index:1}
     .price .muted{color:#dbe6dc}
+
     footer{
       border-top:1px solid var(--sage);padding:34px 22px;color:#657466;
     }
-    .footer-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .footer-logo{
-      display:flex;
-      flex-direction:column;
-      line-height:1;
+
+    .footer-inner{
+      max-width:1120px;margin:0 auto;
+      display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+      align-items:center;
     }
 
-    .footer-logo strong{
-      font-size:22px;
-      font-weight:850;
-      letter-spacing:-.03em;
-    }
-
-    .footer-logo em{
-      font-size:22px;
-      font-style:italic;
-      font-family:"SignPainter", "Snell Roundhand", cursive;
-      color:#5d6b5f;
-      margin-top:-8px;
-      align-self:flex-end;
-      transform:translateX(10px);
-      display:block;
-    }
     @media (max-width: 820px){
       .links{display:none}
       .hero,.split,.grid3{grid-template-columns:1fr}
@@ -199,19 +218,23 @@
       .price{padding:34px}
       .contact-card{align-items:flex-start}
     }
+
     @media (max-width: 700px){
       .info{
         border-radius:20px;
         display:block;
       }
+
       .info span{
         display:block;
         text-align:left;
         margin-top:4px;
       }
+
       .contact-card{
         flex-direction:column;
       }
+
       .liisa-photo{
         width:160px;
         height:160px;
@@ -219,6 +242,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="nav">
@@ -226,12 +250,14 @@
         <span>vivahteikasta</span>
         <em>by Liisa</em>
       </div>
+
       <nav class="links">
         <a href="#puistojumpat">Puistojumpat</a>
         <a href="#liisa">Minusta</a>
         <a href="#hinnat">Hinnat</a>
         <a href="#yhteys">Yhteystiedot</a>
       </nav>
+
       <a class="btn" href="mailto:vivahteikasta@gmail.com?subject=Ilmoittautuminen%20puistojumppaan">Ilmoittaudu</a>
     </div>
   </header>
@@ -250,6 +276,7 @@
           <a class="btn secondary" href="#puistojumpat">Katso tiedot</a>
         </div>
       </div>
+
       <div class="hero-card">
         <img src="hero.jpg" alt="Puistojumppa Rekolan liikuntapuistossa" />
         <div class="floating">
@@ -270,17 +297,20 @@
           Aikataulut julkaistaan Instagramissa @vivahteikasta sekä verkkosivuilla.
           Mukaan tarvitset vain juomapullon, liikuntaan sopivat vaatteet ja halutessasi oman jumppamaton.
         </p>
+
         <div class="grid3">
           <div class="card">
             <div class="icon">⚡</div>
             <h3>Energiaa</h3>
             <p class="muted">Liikunta saa tuntua hyvältä — ei suorittamiselta. Tunnilla saa hengästyä, hymyillä ja tehdä omalla tasolla.</p>
           </div>
+
           <div class="card">
             <div class="icon">🌿</div>
             <h3>Luonnollisesti</h3>
             <p class="muted">Ulkona liikkuminen tuo raikkautta, tasapainoa ja kesäistä hyvää oloa arkeen.</p>
           </div>
+
           <div class="card">
             <div class="icon">💛</div>
             <h3>Yhdessä</h3>
@@ -295,6 +325,7 @@
         <div class="photo">
           <img src="puistojumppa.jpg" alt="Ryhmäliikuntatunti ulkona ilta-auringossa" />
         </div>
+
         <div>
           <div class="pill">Hei, mä oon Liisa 👋</div>
           <h2 class="section-title">Kannustavaa liikettä hyvällä energialla.</h2>
@@ -316,6 +347,7 @@
         <p class="muted" style="max-width:680px">
           Tervetuloa kokeilemaan 4.6. klo 18:00–18:45 veloituksetta. Luvassa on energinen mutta helposti lähestyttävä koko kehon ulkotreeni, jossa yhdistyvät syke, lihaskunto ja hyvä fiilis ilman suorituspaineita.
         </p>
+
         <div class="info-list">
           <div class="info"><strong>Kesän ensimmäinen treeni</strong><span>Veloituksetta 4.6.2026 klo 18:00–18:45</span></div>
           <div class="info"><strong>Puistojumpat</strong><span>Jatkossa 10 € / kerta. Maksu MobilePay:lla paikan päällä. Säävaraus.</span></div>
@@ -349,16 +381,14 @@
   </main>
 
   <footer>
-  <div class="footer-inner">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <strong>vivahteikasta</strong>
+        <em>by Liisa</em>
+      </div>
 
-    <div class="footer-logo">
-      <strong>vivahteikasta</strong>
-      <em>by Liisa</em>
+      <span>Liikettä, energiaa ja hyvinvointia.</span>
     </div>
-
-    <span>Liikettä, energiaa ja hyvinvointia.</span>
-
-  </div>
-</footer>
+  </footer>
 </body>
 </html>

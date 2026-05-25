@@ -36,7 +36,24 @@
       max-width:1120px;margin:0 auto;padding:18px 22px;
       display:flex;align-items:center;justify-content:space-between;gap:20px;
     }
-    .logo{font-size:22px;font-weight:850;letter-spacing:-.03em}
+    .logo{
+      display:flex;
+      flex-direction:column;
+      line-height:1;
+      }
+    .logo span{
+  font-size:22px;
+  font-weight:850;
+  letter-spacing:-.03em;
+}
+
+.logo em{
+  font-size:18px;
+  font-style:italic;
+  font-family:cursive;
+  color:#5d6b5f;
+  margin-top:2px;
+}
     .links{display:flex;gap:26px;font-size:14px;color:#4d604f}
     .links a{text-decoration:none}
     .links a:hover{color:var(--blue)}

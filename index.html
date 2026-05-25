@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vivahteikasta by Liisa – puistojumppia Rekolassa</title>
   <meta name="description" content="Vivahteikasta tarjoaa kesäisiä puistojumppia Rekolan liikuntapuistossa rennolla, energisellä ja kannustavalla otteella." />
+
   <style>
     :root{
       --cream:#faf6f0;
@@ -181,6 +182,42 @@
     .info strong{font-weight:800;white-space:nowrap}
     .info span{text-align:right}
 
+    .signup-form{
+      display:grid;
+      gap:16px;
+      margin-top:28px;
+    }
+
+    .signup-form input,
+    .signup-form textarea{
+      width:100%;
+      padding:18px 22px;
+      border-radius:22px;
+      border:1px solid var(--sage);
+      background:white;
+      font-size:16px;
+      font-family:inherit;
+      color:var(--green);
+    }
+
+    .signup-form textarea{
+      min-height:130px;
+      resize:vertical;
+    }
+
+    .signup-form input:focus,
+    .signup-form textarea:focus{
+      outline:none;
+      border-color:var(--blue);
+      box-shadow:0 0 0 4px rgba(20,99,255,.12);
+    }
+
+    .signup-form button{
+      border:none;
+      cursor:pointer;
+      justify-self:start;
+    }
+
     .price{
       background:var(--green);color:white;border-radius:38px;padding:48px;
       position:relative;overflow:hidden;
@@ -239,9 +276,11 @@
         width:160px;
         height:160px;
       }
-        .photo{
-          min-height:0;
-        }
+
+      .photo{
+        min-height:0;
+      }
+
       .photo img{
         width:100%;
         height:auto;
@@ -273,7 +312,7 @@
   <main>
     <section class="hero">
       <div>
-        <div class="pill">☀️ Kesäisiä puistojumppia Rekolassa </div>
+        <div class="pill">☀️ Kesäisiä puistojumppia Rekolassa</div>
         <h1>Liikettä, energiaa ja hyvää oloa ulkona.</h1>
         <p class="lead">
           Vivahteikasta tarjoaa helposti lähestyttäviä ja energisiä puistojumppia Rekolan liikuntapuistossa.
@@ -322,7 +361,7 @@
           <div class="card">
             <div class="icon">💛</div>
             <h3>Yhdessä</h3>
-            <p class="muted">Kannustava ilmapiiri kuuluu kaikille. Tunnit sopivat niin aloitteleville kuin kokeneemmille liikkujille. </p>
+            <p class="muted">Kannustava ilmapiiri kuuluu kaikille. Tunnit sopivat niin aloitteleville kuin kokeneemmille liikkujille.</p>
           </div>
         </div>
       </div>
@@ -360,36 +399,31 @@
         <p class="muted" style="max-width:680px">
           Tule mukaan kokeilemaan ensimmäistä treeniä maksutta to 4.6. klo 18:00–18:45. Luvassa on energinen mutta helposti lähestyttävä koko kehon ulkotreeni, jossa yhdistyvät syke, lihaskunto ja hyvä fiilis ilman suorituspaineita.
         </p>
-<div class="info-list">
- <div class="info">
-    <strong>Ilmoittautuminen</strong>
-    <span>
-      Ilmoittaudu mukaan sähköpostilla tai Instagram DM:llä.
-    </span>
-  </div>
 
-  <div class="info">
-    <strong>Hinnasto</strong>
-    <span>
-      Ensimmäinen treeni maksutta · Jatkossa 10 € / kerta
-    </span>
-  </div>
+        <form class="signup-form" action="mailto:vivahteikasta@gmail.com?subject=Ilmoittautuminen%20puistojumppaan" method="post" enctype="text/plain">
+          <input type="text" name="Nimi" placeholder="Nimi" required>
+          <input type="email" name="Sähköposti" placeholder="Sähköposti" required>
+          <textarea name="Viesti" placeholder="Viesti / ilmoittautuminen" required></textarea>
+          <button class="btn" type="submit">Ilmoittaudu mukaan ✨</button>
+        </form>
 
-  <div class="info">
-    <strong>Sijainti</strong>
-    <span>
-      Rekolan liikuntapuisto (Joukontie 25, Vantaa)
-    </span>
-  </div>
+        <div class="info-list">
+          <div class="info">
+            <strong>Hinnasto</strong>
+            <span>Ensimmäinen treeni maksutta · Jatkossa 10 € / hlö / kerta</span>
+          </div>
 
-  <div class="info">
-    <strong>Saapuminen</strong>
-    <span>
-      Rekolan juna-asemalta noin 800 m · Kiekollinen parkkipaikka
-    </span>
-  </div>
+          <div class="info">
+            <strong>Sijainti</strong>
+            <span>Rekolan liikuntapuisto (Joukontie 25, Vantaa)</span>
+          </div>
 
-</div>
+          <div class="info">
+            <strong>Saapuminen</strong>
+            <span>Rekolan juna-asemalta noin 800 m · Kiekollinen parkkipaikka</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="yhteys">
@@ -422,7 +456,7 @@
         <em>by Liisa</em>
       </div>
 
-      <span>Liikettä, energiaa ja hyvinvointia. </span>
+      <span>Liikettä, energiaa ja hyvinvointia.</span>
     </div>
   </footer>
 </body>

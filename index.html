@@ -9,14 +9,15 @@
   <style>
     :root{
       --cream:#faf6f0;
-      --green:#1b4a43;
+      --green:#6f8f7a;
       --sage:#d7e8d9;
       --pink:#ffb1c8;
       --hotpink:#ff4f8b;
       --orange:#ff914d;
       --blue:#5170ff;
       --white:#ffffff;
-      --text:#22352c;
+      --text:#4f6658;
+      --soft:#f1f6ef;
     }
 
     *{box-sizing:border-box}
@@ -26,16 +27,16 @@
       margin:0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:var(--cream);
-      color:var(--green);
+      color:var(--text);
     }
 
     a{color:inherit}
 
     header{
       position:sticky;top:0;z-index:20;
-      background:rgba(250,246,240,.82);
+      background:rgba(250,246,240,.86);
       backdrop-filter:blur(18px);
-      border-bottom:1px solid var(--sage);
+      border-bottom:1px solid rgba(215,232,217,.9);
     }
 
     .nav{
@@ -48,15 +49,14 @@
       display:flex;
       flex-direction:column;
       line-height:1;
-      color:#5170ff;
     }
 
     .logo span,
     .footer-logo strong{
       font-size:22px;
       font-weight:850;
-      letter-spacing:-.03em;
-      color:#5170ff;
+      letter-spacing:-.04em;
+      color:var(--blue);
     }
 
     .logo em,
@@ -64,13 +64,13 @@
       font-size:18px;
       font-style:italic;
       font-family:"SignPainter", "Snell Roundhand", cursive;
-      color:#5170ff;
+      color:var(--green);
       margin-top:2px;
       margin-right:14px;
       align-self:flex-end;
     }
 
-    .links{display:flex;gap:26px;font-size:14px;color:#4d604f}
+    .links{display:flex;gap:26px;font-size:14px;color:var(--green)}
     .links a{text-decoration:none}
     .links a:hover{color:var(--blue)}
 
@@ -78,13 +78,13 @@
       display:inline-flex;align-items:center;justify-content:center;
       min-height:46px;padding:0 22px;border-radius:999px;
       background:var(--blue);color:white;text-decoration:none;font-weight:800;
-      box-shadow:0 18px 38px rgba(20,99,255,.22);
+      box-shadow:0 18px 38px rgba(81,112,255,.22);
       transition:.2s ease;
     }
 
     .btn:hover{background:var(--hotpink);transform:translateY(-1px)}
     .btn.secondary{background:white;color:var(--green);box-shadow:none;border:1px solid var(--sage)}
-    .btn.secondary:hover{background:var(--orange);color:white;border-color:var(--orange)}
+    .btn.secondary:hover{background:var(--green);color:white;border-color:var(--green)}
 
     .hero{
       max-width:1120px;margin:0 auto;padding:72px 22px 54px;
@@ -94,46 +94,57 @@
     .pill{
       display:inline-flex;gap:8px;align-items:center;
       padding:9px 14px;border:1px solid var(--sage);border-radius:999px;
-      background:white;color:#526554;font-size:14px;font-weight:700;
+      background:white;color:var(--green);font-size:14px;font-weight:700;
       margin-bottom:22px;
     }
 
     h1{
       font-size:clamp(46px,7vw,82px);
       line-height:.94;letter-spacing:-.07em;margin:0;
+      color:var(--green);
+    }
+
+    .blue-text{
+      color:var(--blue);
     }
 
     .lead{
-      margin:24px 0 30px;color:#566757;font-size:19px;line-height:1.75;max-width:620px;
+      margin:24px 0 30px;color:#4f6257;font-size:19px;line-height:1.75;max-width:620px;
     }
 
     .hero-card{
       position:relative;border-radius:38px;overflow:hidden;
       min-height:580px;background:var(--pink);
-      box-shadow:0 34px 80px rgba(22,53,31,.18);
+      box-shadow:0 34px 80px rgba(18,60,47,.16);
     }
 
     .hero-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
 
     .floating{
       position:absolute;left:22px;right:22px;bottom:22px;
-      background:rgba(255,255,255,.88);backdrop-filter:blur(16px);
-      padding:18px;border-radius:26px;border:1px solid rgba(255,255,255,.7);
+      background:rgba(255,255,255,.9);backdrop-filter:blur(16px);
+      padding:18px;border-radius:26px;border:1px solid rgba(255,255,255,.75);
       display:flex;justify-content:space-between;gap:16px;align-items:center;
     }
 
-    .floating strong{display:block;font-size:17px}
+    .floating strong{display:block;font-size:17px;color:var(--green)}
     .floating span{display:block;color:#5d6b5f;font-size:14px;margin-top:3px}
 
     section{padding:78px 22px}
     .wrap{max-width:1120px;margin:0 auto}
-    .section-title{font-size:clamp(34px,5vw,56px);line-height:1;letter-spacing:-.055em;margin:0}
+
+    .section-title{
+      font-size:clamp(34px,5vw,56px);
+      line-height:1;letter-spacing:-.055em;margin:0;
+      color:var(--green);
+    }
+
     .muted{color:#596b5b;line-height:1.75;font-size:17px}
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
 
     .card{
       background:white;border:1px solid var(--sage);border-radius:30px;padding:26px;
-      box-shadow:0 20px 50px rgba(22,53,31,.08);
+      box-shadow:0 20px 50px rgba(18,60,47,.08);
     }
 
     .contact-card{
@@ -155,19 +166,25 @@
     }
 
     .icon{
-      width:44px;height:44px;border-radius:16px;background:var(--pink);
+      width:44px;height:44px;border-radius:16px;background:#fff0f5;
       display:grid;place-items:center;font-size:22px;margin-bottom:18px;
     }
 
-    .card:nth-child(2) .icon{background:#d7e7ff}
-    .card:nth-child(3) .icon{background:#ffe1c9}
-    .card h3{font-size:24px;margin:0 0 10px;letter-spacing:-.03em}
+    .card:nth-child(2) .icon{background:#eef1ff}
+    .card:nth-child(3) .icon{background:#fff0e6}
+
+    .card h3{
+      font-size:24px;
+      margin:0 0 10px;
+      letter-spacing:-.03em;
+      color:var(--blue);
+    }
 
     .split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
 
     .photo{
       border-radius:36px;overflow:hidden;min-height:420px;background:var(--sage);
-      box-shadow:0 26px 70px rgba(22,53,31,.12);
+      box-shadow:0 26px 70px rgba(18,60,47,.12);
     }
 
     .photo img{width:100%;height:100%;object-fit:cover;display:block}
@@ -177,7 +194,7 @@
     .info{
       background:white;border:1px solid var(--sage);border-radius:999px;padding:14px 22px;
       display:flex;justify-content:space-between;gap:18px;align-items:center;
-      color:#173d2b;font-size:15px;
+      color:var(--green);font-size:15px;
     }
 
     .info strong{font-weight:800;white-space:nowrap}
@@ -210,7 +227,7 @@
     .signup-form textarea:focus{
       outline:none;
       border-color:var(--blue);
-      box-shadow:0 0 0 4px rgba(20,99,255,.12);
+      box-shadow:0 0 0 4px rgba(81,112,255,.14);
     }
 
     .signup-form button{
@@ -222,11 +239,12 @@
     .price{
       background:var(--green);color:white;border-radius:38px;padding:48px;
       position:relative;overflow:hidden;
+      box-shadow:0 26px 70px rgba(18,60,47,.16);
     }
 
     .price:before{
       content:"";position:absolute;width:220px;height:220px;border-radius:50%;
-      background:var(--hotpink);right:-70px;top:-70px;opacity:.9;
+      background:var(--pink);right:-70px;top:-70px;opacity:.95;
     }
 
     .price:after{
@@ -235,7 +253,8 @@
     }
 
     .price > *{position:relative;z-index:1}
-    .price .muted{color:#dbe6dc}
+    .price .section-title{color:white}
+    .price .muted{color:#e7eee8}
 
     footer{
       border-top:1px solid var(--sage);padding:34px 22px;color:#657466;
@@ -314,7 +333,7 @@
     <section class="hero">
       <div>
         <div class="pill">☀️ Kesäisiä puistojumppia Rekolassa</div>
-        <h1>Liikettä, energiaa ja hyvää oloa ulkona.</h1>
+        <h1>Liikettä, energiaa ja hyvää oloa <span class="blue-text">ulkona.</span></h1>
         <p class="lead">
           Tarjoan helposti lähestyttäviä ja energisiä puistojumppia Rekolan liikuntapuistossa.
           Tunnit sopivat eri tasoisille liikkujille — tärkeintä on hyvä fiilis, luonnollinen liike ja kannustava ilmapiiri. 

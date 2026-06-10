@@ -111,9 +111,7 @@
       color:var(--green);
     }
 
-    .blue-text{
-      color:var(--blue);
-    }
+    .blue-text{color:var(--blue)}
 
     .lead{
       margin:24px 0 30px;color:#4f6257;font-size:19px;line-height:1.75;max-width:620px;
@@ -136,10 +134,7 @@
 
     .floating strong{display:block;font-size:17px;color:var(--green)}
     .floating span{display:block;color:#5d6b5f;font-size:14px;margin-top:3px}
-
-    .floating > strong{
-      white-space:nowrap;
-      }
+    .floating > strong{white-space:nowrap}
 
     section{padding:78px 22px}
     .wrap{max-width:1120px;margin:0 auto}
@@ -158,22 +153,12 @@
       box-shadow:0 20px 50px rgba(18,60,47,.08);
     }
 
-    .contact-card{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:40px;
-    }
-
+    .contact-card{display:flex;justify-content:space-between;align-items:center;gap:40px}
     .contact-text{flex:1}
 
     .liisa-photo{
-      width:150px;
-      height:150px;
-      object-fit:cover;
-      object-position:center 25%;
-      border-radius:20px;
-      flex-shrink:0;
+      width:150px;height:150px;object-fit:cover;object-position:center 25%;
+      border-radius:20px;flex-shrink:0;
     }
 
     .icon{
@@ -185,27 +170,17 @@
     .card:nth-child(3) .icon{background:#fff0e6}
 
     .card h3{
-      font-size:24px;
-      margin:0 0 10px;
-      letter-spacing:-.03em;
-      color:var(--blue);
+      font-size:24px;margin:0 0 10px;letter-spacing:-.03em;color:var(--blue);
     }
 
     .split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
 
     .photo{
-      border-radius:36px;
-      overflow:hidden;
-      min-height:420px;
+      border-radius:36px;overflow:hidden;min-height:420px;
       box-shadow:0 26px 70px rgba(18,60,47,.12);
     }
 
-    .photo img{
-      width:100%;
-      aspect-ratio:1/1;
-      object-fit:cover;
-      display:block;
-    }
+    .photo img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 
     .info-list{display:grid;gap:14px;margin-top:24px}
 
@@ -217,42 +192,6 @@
 
     .info strong{font-weight:800;white-space:nowrap}
     .info span{text-align:right}
-
-    .signup-form{
-      display:grid;
-      gap:16px;
-      margin-top:28px;
-    }
-
-    .signup-form input,
-    .signup-form textarea{
-      width:100%;
-      padding:18px 22px;
-      border-radius:22px;
-      border:1px solid var(--sage);
-      background:white;
-      font-size:16px;
-      font-family:inherit;
-      color:var(--green);
-    }
-
-    .signup-form textarea{
-      min-height:130px;
-      resize:vertical;
-    }
-
-    .signup-form input:focus,
-    .signup-form textarea:focus{
-      outline:none;
-      border-color:var(--blue);
-      box-shadow:0 0 0 4px rgba(81,112,255,.14);
-    }
-
-    .signup-form button{
-      border:none;
-      cursor:pointer;
-      justify-self:start;
-    }
 
     .price{
       background:var(--green);color:white;border-radius:38px;padding:48px;
@@ -295,35 +234,12 @@
     }
 
     @media (max-width: 700px){
-      .info{
-        border-radius:20px;
-        display:block;
-      }
-
-      .info span{
-        display:block;
-        text-align:left;
-        margin-top:4px;
-      }
-
-      .contact-card{
-        flex-direction:column;
-      }
-
-      .liisa-photo{
-        width:160px;
-        height:160px;
-      }
-
-      .photo{
-        min-height:0;
-      }
-
-      .photo img{
-        width:100%;
-        height:auto;
-        display:block;
-      }
+      .info{border-radius:20px;display:block}
+      .info span{display:block;text-align:left;margin-top:4px}
+      .contact-card{flex-direction:column}
+      .liisa-photo{width:160px;height:160px}
+      .photo{min-height:0}
+      .photo img{width:100%;height:auto;display:block}
     }
   </style>
 </head>
@@ -343,7 +259,7 @@
         <a href="#yhteys">Yhteystiedot</a>
       </nav>
 
-      <a class="btn" href="mailto:vivahteikasta@gmail.com?subject=Ilmoittautuminen%20puistojumppaan">Ilmoittaudu</a>
+      <a class="btn" href="#hinnat">Katso tulevat tunnit</a>
     </div>
   </header>
 
@@ -354,10 +270,10 @@
         <h1>Liikettä, energiaa ja hyvää oloa <span class="blue-text">ulkona.</span></h1>
         <p class="lead">
           Tarjoan helposti lähestyttäviä ja energisiä puistojumppia Rekolan liikuntapuistossa.
-          Tunnit sopivat eri tasoisille liikkujille — tärkeintä on hyvä fiilis, luonnollinen liike ja kannustava ilmapiiri. 
+          Tunnit sopivat eri tasoisille liikkujille — tärkeintä on hyvä fiilis, luonnollinen liike ja kannustava ilmapiiri.
         </p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn" href="mailto:vivahteikasta@gmail.com?subject=Ilmoittautuminen%20puistojumppaan">Ilmoittaudu seuraavalle tunnille</a>
+          <a class="btn" href="#hinnat">Katso tulevat tunnit</a>
           <a class="btn secondary" href="#puistojumpat">Katso tiedot</a>
         </div>
       </div>
@@ -366,11 +282,10 @@
         <img src="hero.jpg" alt="Puistojumppa Rekolan liikuntapuistossa" />
         <div class="floating">
           <div>
-            <strong>Seuraava puistojumppa</strong>
-            <span>To 11.6. klo 18.00–18.45<br> 
-                  Rekolan liikuntapuisto</span>
+            <strong>Puistojumppa to 11.6. on peruttu</strong>
+            <span>Uudesta ajankohdasta ilmoitetaan myöhemmin.</span>
           </div>
-          <strong>10€ / hlö / kerta</strong>
+          <strong>10 € / hlö / kerta</strong>
         </div>
       </div>
     </section>
@@ -381,7 +296,7 @@
         <p class="muted" style="max-width:720px">
           Tunnit järjestetään aluksi pop up -tyylisesti eri ajankohtina Rekolan liikuntapuistossa.
           Aikataulut julkaistaan Instagramissa @vivahteikasta sekä verkkosivuilla.
-          Mukaan tarvitset vain juomapullon, oman jumppamaton ja liikuntaan sopivat vaatteet. Tunnin toteutuminen edellyttää vähintään 5 osallistujaa. Tunti järjestetään säävarauksella. Mahdollisista muutoksista ilmoitetaan osallistujille erikseen.
+          Mukaan tarvitset vain juomapullon, oman jumppamaton ja liikuntaan sopivat vaatteet.
         </p>
 
         <div class="grid3">
@@ -416,14 +331,14 @@
           <div class="pill">Hei, mä oon Liisa 👋</div>
           <h2 class="section-title">Kannustavaa liikettä hyvällä energialla.</h2>
           <p class="muted">
-            Olen wellness tourism business -tradenomi, ryhmäliikunnanohjaaja ja joogaohjaajaopiskelija. 
+            Olen wellness tourism business -tradenomi, ryhmäliikunnanohjaaja ja joogaohjaajaopiskelija.
             Ohjaan monipuolisesti erilaisia tunteja vauhdikkaista HIIT- ja cardiotreeneistä, perinteisiin lihaskuntotreeneihin sekä kehonhuoltoon ja syvävenyttelyyn.
           </p>
           <p class="muted">
             Vivahteikasta by Liisa syntyi halusta luoda helposti lähestyttäviä ja hyvän energian tunteja, joille jokainen on tervetullut juuri omana itsenään liikkumaan omalla tasollaan.
           </p>
           <p class="muted">
-            Puistojumppien lisäksi ohjaan liikuntahetkiä myös esimerkiksi polttareihin, yritysten virkistyspäiviin, työporukoille ja muihin yksityistilaisuuksiin. 
+            Puistojumppien lisäksi ohjaan liikuntahetkiä myös esimerkiksi polttareihin, yritysten virkistyspäiviin, työporukoille ja muihin yksityistilaisuuksiin.
             Suunnitellaan juuri teidän porukalle sopiva kokonaisuus — energinen treeni, rento hyvinvointihetki tai jotain siltä väliltä. Kysy rohkeasti tarjous!
           </p>
         </div>
@@ -432,28 +347,17 @@
 
     <section id="hinnat">
       <div class="wrap price">
-        <h2 class="section-title">Tule mukaan seuraavaan puistojumppaan.</h2>
+        <h2 class="section-title">Puistojumppa to 11.6. on peruttu.</h2>
         <p class="muted" style="max-width:680px">
-          Seuraava puistojumppa järjestetään to 11.6. klo 18.00–18.45 Rekolan liikuntapuistossa.
-         Luvassa on energinen mutta helposti lähestyttävä koko kehon ulkotreeni, jossa yhdistyvät syke, lihaskunto ja hyvä fiilis ilman suorituspaineita.
-         Tunnin toteutuminen edellyttää vähintään 5 osallistujaa. Tunti järjestetään säävarauksella, ja mahdollisista muutoksista ilmoitetaan osallistujille erikseen.
+          Valitettavasti seuraava puistojumppa torstaina 11.6. on peruttu.
+          Uudesta ajankohdasta ilmoitetaan myöhemmin verkkosivuilla sekä Instagramissa @vivahteikasta.
         </p>
-
-        <form class="signup-form" action="mailto:vivahteikasta@gmail.com?subject=Ilmoittautuminen%20puistojumppaan" method="post" enctype="text/plain">
-          <input type="text" name="Nimi" placeholder="Nimi" required>
-          <input type="email" name="Sähköposti" placeholder="Sähköposti" required>
-          <textarea name="Viesti" placeholder="Viesti / ilmoittautuminen" required></textarea>
-          <button class="btn" type="submit">Ilmoittaudu mukaan ✨</button>
-        </form>
 
         <div class="info-list">
           <div class="info">
-            <strong>Hinnasto</strong>
-            <span>
-             10 € / hlö / kerta<br>
-            MobilePay-maksu paikan päällä.
-          </span>
-        </div>
+            <strong>Seuraavat tunnit</strong>
+            <span>Julkaistaan myöhemmin verkkosivuilla ja Instagramissa.</span>
+          </div>
 
           <div class="info">
             <strong>Sijainti</strong>
@@ -461,8 +365,11 @@
           </div>
 
           <div class="info">
-            <strong>Saapuminen</strong>
-            <span>Rekolan juna-asemalta noin 800 m · Kiekollinen parkkipaikka</span>
+            <strong>Hinnasto</strong>
+            <span>
+              10 € / hlö / kerta<br>
+              MobilePay-maksu paikan päällä.
+            </span>
           </div>
         </div>
       </div>
@@ -473,7 +380,8 @@
         <div>
           <h2 class="section-title">Nähdään puistojumpassa!</h2>
           <p class="muted">
-            Ilmoittaudu mukaan sähköpostilla tai Instagram DM:llä. Seuraavat tunnit julkaistaan verkkosivuilla ja Instagramissa @vivahteikasta. 
+            Seuraavat tunnit julkaistaan verkkosivuilla ja Instagramissa @vivahteikasta.
+            Voit olla yhteydessä sähköpostilla tai Instagram DM:llä.
           </p>
         </div>
 
@@ -482,7 +390,7 @@
             <h3>Yhteystiedot</h3>
             <p class="muted">✉️ <a href="mailto:vivahteikasta@gmail.com">vivahteikasta@gmail.com</a></p>
             <p class="muted">📷 <a href="https://instagram.com/vivahteikasta" target="_blank" rel="noreferrer">@vivahteikasta</a></p>
-            <a class="btn" href="mailto:vivahteikasta@gmail.com?subject=Ilmoittautuminen%20puistojumppaan">Ilmoittaudu mukaan</a>
+            <a class="btn" href="mailto:vivahteikasta@gmail.com">Ota yhteyttä</a>
           </div>
 
           <img src="liisa.jpg" alt="Liisa" class="liisa-photo">
@@ -498,7 +406,7 @@
         <em>by Liisa</em>
       </div>
 
-      <span>Liikettä, energiaa ja hyvinvointia. </span>
+      <span>Liikettä, energiaa ja hyvinvointia.</span>
     </div>
   </footer>
 </body>
